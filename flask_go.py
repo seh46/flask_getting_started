@@ -27,7 +27,9 @@ def findDistance():
     s = request.get_json()
     point1 = s["a"]
     point2 = s["b"]
-    dist = math.sqrt((point1[0]-point2[0])^2+(point1[1]-point2[1])^2)
+    print(point1)
+    print(point2)
+    dist = math.sqrt(abs(point1[0]-point2[0])^2+abs(point1[1]-point2[1])^2)
     dist_out = {
         "distance": dist,
         "a": point1,
