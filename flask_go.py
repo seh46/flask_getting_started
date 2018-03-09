@@ -35,4 +35,4 @@ def findDistance():
         "a": point1,
         "b": point2
     }
-    return jsonify(dist_out), 200
+    return jsonify(dist_out,s), 200
