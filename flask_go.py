@@ -23,15 +23,15 @@ def helloName(name):
 @app.route("/distance", methods=["POST"])
 def findDistance():
     import math
-    try:
-        r = request.get_json()
-        s = json.loads(r)
-        point1 = s["a"]
-        point2 = s["b"]
-        dist = math.sqrt((point1[0]-point2[0])^2+(point1[1]-point2[1])^2)
-        dist_out = {
-            "distance": dist,
-            "a": point1,
-            "b": point2
-        }
-        return jsonify(dist_out), 200
+
+    r = request.get_json()
+    s = json.loads(r)
+    point1 = s["a"]
+    point2 = s["b"]
+    dist = math.sqrt((point1[0]-point2[0])^2+(point1[1]-point2[1])^2)
+    dist_out = {
+        "distance": dist,
+        "a": point1,
+        "b": point2
+    }
+    return jsonify(dist_out), 200
