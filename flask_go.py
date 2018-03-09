@@ -24,8 +24,7 @@ def helloName(name):
 def findDistance():
     import math
 
-    r = request.get_json()
-    s = json.loads(r)
+    s = request.get_json()
     point1 = s["a"]
     point2 = s["b"]
     dist = math.sqrt((point1[0]-point2[0])^2+(point1[1]-point2[1])^2)
